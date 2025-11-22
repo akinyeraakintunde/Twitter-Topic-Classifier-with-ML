@@ -1,68 +1,45 @@
 # Twitter Topic Classifier with Machine Learning
 
-A machine learning approach to **thematic classification of Twitter data**.  
-This project builds an end-to-end NLP pipeline that classifies social-media style text into three themes:
+This repository contains the code and dataset for an MSc Data Science project
+by **Ibrahim Akintunde Akinyera**. The goal of the project is to build an
+end-to-end natural language processing (NLP) pipeline that classifies
+social-media style text into three thematic categories:
 
-- 🟣 **Entertainment**
-- 🟡 **Politics**
-- 🟢 **Sports**
+- 🏛️ Politics  
+- 🏟️ Sports  
+- 🎬 Entertainment  
 
-It was developed as part of my **MSc Data Science** dissertation and demonstrates practical skills in:
-
-- Data extraction from Twitter (API + Tweepy)
-- Text cleaning and NLP preprocessing
-- Feature engineering (TF–IDF and contextual embeddings)
-- Supervised model training and evaluation
-- Visualisation of results (word clouds, confusion matrices, classification reports)
-
-> 📌 In my MSc dissertation, I further extend this work with a **transformer-based architecture using BERT embeddings** and GPU training, achieving a **macro F1 score of ~0.96** on the test set. The code in this repository focuses on the classical machine-learning pipeline and is structured for clarity and reproducibility.
- 
----
-
-## 1. Project Overview
-
-Social media generates huge volumes of noisy, unstructured text.  
-Manually sorting tweets into themes (e.g. deciding which tweets are about politics, sports or entertainment) is:
-
-- Time-consuming  
-- Error-prone  
-- Difficult to scale
-
-This repository implements a **supervised NLP pipeline** that:
-
-1. Loads labelled text data for three thematic classes
-2. Cleans and normalises raw text (mentions, URLs, emojis, punctuation)
-3. Converts text into numeric features (TF–IDF)
-4. Trains multiple classifiers (e.g. SVM, Logistic Regression, Naïve Bayes)
-5. Evaluates them using accuracy, precision, recall, F1-score
-6. Exposes a simple prediction function for new, unseen text
-
-This project can be adapted for:
-
-- Social listening and trend analysis  
-- Targeted content marketing  
-- Topic routing and content recommendation  
-- Early-warning signals for public opinion or events
+The project demonstrates practical skills in text preprocessing, feature
+engineering, model training and evaluation using Python and scikit-learn.
 
 ---
 
-## 2. Repository Structure
+## 🌐 Project Overview
 
-```bash
+Social media generates vast amounts of unstructured text. Understanding what
+people are discussing requires automated methods for thematic classification.
+This project implements a complete supervised learning pipeline that:
+
+1. Loads labelled text data for three categories.  
+2. Cleans and normalises the raw text.  
+3. Converts text into numerical TF–IDF feature vectors.  
+4. Trains multiple ML models (SVM, Logistic Regression, Naive Bayes).  
+5. Evaluates performance using accuracy, F1-score, and confusion matrix.  
+6. Provides a simple prediction interface for unseen text.
+
+---
+
+## 📂 Repository Structure
+
+```text
 .
-├── README.md                  # Project overview and documentation
-├── requirements.txt           # Python dependencies
-├── script_model.py            # Main training / evaluation script
-├── EDA.py                     # Exploratory data analysis (optional)
-├── data/                      # Input datasets (compressed)
-│   ├── politics.zip           # Politics class
-│   ├── sport.zip              # Sports class
-│   └── entertainment.zip      # Entertainment class
+├── README.md               # project overview and usage
+├── script_model.py         # main training / evaluation script
+├── EDA.py                  # optional exploratory data analysis
+├── requirements.txt        # project dependencies
 ├── docs/
-│   ├── nlp-pipeline.png       # High-level pipeline diagram
-│   └── figures/               # (Add these files)
-│       ├── model_architecture.png
-│       ├── training_curve.png
-│       ├── classification_report.png
-│       └── confusion_matrix.png
-└── extra_files+code.zip       # Additional notebooks / scripts (archived)
+│   └── nlp-pipeline.png    # architecture diagram (NLP pipeline)
+└── data/
+    ├── politics.zip        # labelled text for politics class
+    ├── sport.zip           # labelled text for sports class
+    └── entertainment.zip   # labelled text for entertainment class
