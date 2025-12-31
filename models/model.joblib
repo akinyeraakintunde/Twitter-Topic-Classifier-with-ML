@@ -1,0 +1,5 @@
+{
+  "model": trained_classifier,
+  "vectorizer": tfidf_vectorizer,
+  "labels": ["Politics","Sports","Entertainment"]
+}
