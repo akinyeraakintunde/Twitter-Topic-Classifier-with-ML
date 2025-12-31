@@ -2,8 +2,7 @@ import os
 import streamlit as st
 import numpy as np
 
-from src.model_runtime import load_or_train
-
+from model_runtime import load_or_train
 
 st.set_page_config(page_title="Twitter Topic Classifier (Live Demo)", layout="centered")
 
